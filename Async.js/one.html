@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ASYNC Practice</h1>
+    <button id="button">STOP</button>
+</body>
+<script>
+//    setTimeout(function() {
+//     console.log("Suhel");  
+//     }, 2000);
+    
+//**** HOW TO USE setTimeout *****
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Learning setTimeout";
+    }
+    setTimeout(changeText, 2000);
+
+    const who = function(){
+        document.querySelector('h1').innerHTML = "Suhel is learning Async JS";
+    }
+    const whoKaun = setTimeout(who, 4000);
+
+
+//**** HOW TO STOP setTimeout *****
+ document.querySelector('#button').addEventListener('click', function(){
+    clearTimeout(whoKaun);
+ });
+ 
+</script>
+</html>
